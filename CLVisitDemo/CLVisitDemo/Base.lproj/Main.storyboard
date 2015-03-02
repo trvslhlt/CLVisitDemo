@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="CLVisitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Awaiting CLVisit" translatesAutoresizingMaskIntoConstraints="NO" id="0E2-Qi-PyA">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LD2-Og-mS1">
+                                <rect key="frame" x="200" y="550" width="200" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ivw-o5-xPL"/>
+                                </constraints>
+                                <state key="normal" title="Manual Logging">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="manualLoggingButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3wd-DL-xls"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="LD2-Og-mS1" secondAttribute="centerX" id="07b-sG-pPf"/>
+                            <constraint firstItem="0E2-Qi-PyA" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="HIb-Up-5tA"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0E2-Qi-PyA" secondAttribute="bottom" id="RJf-La-Ns9"/>
+                            <constraint firstItem="0E2-Qi-PyA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="j3c-1Q-RUQ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="LD2-Og-mS1" secondAttribute="bottom" constant="20" id="q7A-Xb-ypL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0E2-Qi-PyA" secondAttribute="trailing" constant="-16" id="uJC-x8-hne"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="manualLoggingButton" destination="LD2-Og-mS1" id="Mod-uq-C6r"/>
+                        <outlet property="textView" destination="0E2-Qi-PyA" id="tWy-Aj-BIF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
